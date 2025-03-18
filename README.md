@@ -40,7 +40,9 @@ pip install -r requirements.txt
 Open pgAdmin and create a new database:
 
 Database Name: billing_system
+
 User: billing_user
+
 Password: billing_pass
 
 Run this SQL query in pgAdmin:
@@ -65,6 +67,7 @@ python app.py
 
 
 🔗 Contributing
+
 Want to improve this project? Follow these steps:
 
 Fork the repository
