@@ -12,58 +12,58 @@ It allows users to **add products, store them in a database, generate bills, and
 ✅ **Save Bill as a Text File (`generated_bill.txt`)**  
 ✅ **Multi-user LAN Access (via PostgreSQL)**  
 
----
-
 ## 🚀 Installation Guide
 
 ### 1️⃣ Clone the Repository
 ```sh
 git clone https://github.com/YOUR_GITHUB_USERNAME/billing-system.git
 cd billing-system
-2️⃣ Create a Virtual Environment
-sh
-Copy
-Edit
+```
+
+### 2️⃣ Create a Virtual Environment
+```sh
 python -m venv venv
+```
+
 Activate it:
 
 Windows: venv\Scripts\activate
 Linux/Mac: source venv/bin/activate
-3️⃣ Install Dependencies
-sh
-Copy
-Edit
+
+### 3️⃣ Install Dependencies
+```sh
 pip install -r requirements.txt
-4️⃣ Set Up PostgreSQL Database
+```
+
+### 4️⃣ Set Up PostgreSQL Database
+
 Open pgAdmin and create a new database:
 
 Database Name: billing_system
 User: billing_user
 Password: billing_pass
-Run this SQL query in pgAdmin:
 
-sql
-Copy
-Edit
+Run this SQL query in pgAdmin:
+```sh
 CREATE DATABASE billing_system;
 CREATE USER billing_user WITH ENCRYPTED PASSWORD 'billing_pass';
 GRANT ALL PRIVILEGES ON DATABASE billing_system TO billing_user;
-5️⃣ Update Database Connection (database.py)
-Modify the connection URL in database.py if needed:
+```
 
-python
-Copy
-Edit
+### 5️⃣ Update Database Connection (database.py)
+Modify the connection URL in database.py if needed:
+```sh
 DATABASE_URL = "postgresql://billing_user:billing_pass@localhost/billing_system"
-6️⃣ Run the Application
-sh
-Copy
-Edit
+```
+
+### 6️⃣ Run the Application
+```sh
 python app.py
+```
+
 🎉 The GUI will launch, allowing you to add products, generate bills, and save invoices!
 
-📸 Screenshots
-<img src="screenshots/main_window.png" width="500"> <img src="screenshots/bill_window.png" width="500">
+
 🔗 Contributing
 Want to improve this project? Follow these steps:
 
@@ -72,10 +72,11 @@ Create a new branch (git checkout -b feature-name)
 Commit your changes (git commit -m "Added a new feature")
 Push to the branch (git push origin feature-name)
 Open a Pull Request
-📄 License
+
+### 📄 License
 This project is open-source and available under the MIT License.
 
-👩‍💻 Author
+### 👩‍💻 Author
 Shruti
 📧 Contact: [shrutishukla297@gmail.com]
 
